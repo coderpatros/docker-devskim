@@ -1,3 +1,5 @@
+[![Build status](https://dev.azure.com/patros/OpenSource/_apis/build/status/docker-devskim)](https://dev.azure.com/patros/OpenSource/_build/latest?definitionId=23)
+
 DevSkim Docker Container
 ========================
 
