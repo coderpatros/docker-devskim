@@ -17,4 +17,5 @@ COPY devskim.sh /devskim.sh
 
 WORKDIR /code
 
-CMD [ "/devskim.sh" ]
+ENTRYPOINT [ "devskim" ]
+CMD [ "--help" ]
