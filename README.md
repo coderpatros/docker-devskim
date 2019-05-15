@@ -9,7 +9,7 @@ Basic Usage
 
 Running (assuming source code is in the current working directory)...
 
-    docker run --user `id --user`:`id --user` --volume `pwd`:/code devskim analyze /code /code/devskim.txt
+    docker run --user `id --user`:`id --user` --volume `pwd`:/code coderpatros/devskim:latest analyze /code /code/devskim.txt
 
 will generate a `devskim.txt` file in the current working directory.
 
