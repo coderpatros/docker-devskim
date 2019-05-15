@@ -1,11 +1,6 @@
 #!/bin/bash
 set -e
 devskim analyze . devskim.txt
+EXIT_CODE=$?
 chmod 666 devskim.txt
-
-if [ -s devskim.txt ]
-then
-    exit 1
-else
-    exit 0
-fi
+exit $EXIT_CODE

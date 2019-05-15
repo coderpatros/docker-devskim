@@ -12,22 +12,7 @@ Running (assuming source code is in the current working directory)...
 
 will generate a `devskim.txt` file.
 
-If no issues are found the file will be empty and the process will terminate
-with a zero exit code.
-
-Otherwise you get a non-zero exit code and non-empty file.
-
-Intent
-------
-
-There are already very good IDE plugins available for Visual Studio and VS Code.
-You should definitely be using them.
-
-The intent of this docker container is not to make it easy to run locally.
-But to make it easy to run as part of your CI/CD process.
-
-In my use case I want to "break builds" when rules haven't been addressed.
-Hence the non-zero exit code for any rule matches, regardless of severity.
+If no issues are found the file will be empty.
 
 Docker Tags
 -----------
