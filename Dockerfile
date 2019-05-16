@@ -1,3 +1,15 @@
+# until suppression (mainly) is supported by official DevSkim CLI build our own
+FROM mcr.microsoft.com/dotnet/core/sdk:2.2 AS builder
+
+RUN echo "bump"
+RUN cd /tmp && \
+    git clone https://github.com/patros/DevSkim.git && \
+    cd DevSkim && \
+    git checkout custom && \
+    mkdir /tmp/binary && \
+    dotnet publish --configuration Release --runtime linux-x64 --output /tmp/binary /tmp/DevSkim/src/Microsoft.DevSkim/Microsoft.DevSkim.CLI/Microsoft.DevSkim.CLI.csproj && \
+    chmod +x /tmp/binary/devskim
+
 FROM ubuntu:18.04
 
 ARG VERSION=0.1.11
@@ -12,6 +24,8 @@ RUN apt-get update && \
     apt-get purge -y wget && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/*
+
+COPY --from=builder /tmp/binary /usr/share/devskim/lib
 
 ENTRYPOINT [ "devskim" ]
 CMD [ "--help" ]

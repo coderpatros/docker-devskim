@@ -4,6 +4,14 @@
 DevSkim Docker Container
 ========================
 
+_PLEASE NOTE: I am currently using a custom build of DevSkim CLI._
+
+The official build does not currently support suppression comments.
+To review the changes I've made please view the commit history in my
+[custom branch](https://github.com/patros/DevSkim/commits/custom).
+
+Once upstream supports suppression (and maybe non-zero exit codes) I'll revert to using it.
+
 Basic Usage
 -----------
 
