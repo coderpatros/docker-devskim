@@ -6,32 +6,20 @@ DevSkim Docker Container
 
 _PLEASE NOTE: I am currently using a custom build of DevSkim CLI._
 
-The official build does not currently support suppression comments.
+The official build does not currently support suppression comments or non-zero exit codes when issues are found.
 To review the changes I've made please view the commit history in my
 [custom branch](https://github.com/patros/DevSkim/commits/custom).
 
-Once upstream supports suppression (and maybe non-zero exit codes) I'll revert to using it.
+Once upstream changes have been accepted I'll revert to using it.
 
 Basic Usage
 -----------
 
 Running (assuming source code is in the current working directory)...
 
-    docker run --user `id --user`:`id --user` --volume `pwd`:/code coderpatros/devskim:latest analyze /code /code/devskim.txt
+    docker run --volume `pwd`:/code coderpatros/devskim:latest analyze /code
 
-will generate a `devskim.txt` file in the current working directory.
-
-If no issues are found the file will be empty.
-
-Explanation:
-
-This runs the devskim process as the current user ensuring new files have the expected file ownership
-
-    --user `id --user`:`id --user`
-
-This mounts the current working directory as `/code` within the container (`pwd` is print working directory)
-
-    --volume `pwd`:/code
+If no issues are found the exit code will be 0.
 
 Docker Tags
 -----------
