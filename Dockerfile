@@ -2,9 +2,8 @@
 FROM mcr.microsoft.com/dotnet/core/sdk:2.2 AS builder
 
 RUN cd /tmp && \
-    git clone --depth 1 https://github.com/patros/DevSkim.git && \
+    git clone --depth 1 https://github.com/patros/DevSkim.git --branch custom --single-branch && \
     cd DevSkim && \
-    git checkout custom && \
     mkdir /tmp/binary && \
     dotnet publish --configuration Release --runtime linux-x64 --output /tmp/binary /tmp/DevSkim/src/Microsoft.DevSkim/Microsoft.DevSkim.CLI/Microsoft.DevSkim.CLI.csproj && \
     chmod +x /tmp/binary/devskim
