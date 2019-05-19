@@ -1,7 +1,6 @@
 # until suppression (mainly) is supported by official DevSkim CLI build our own
 FROM mcr.microsoft.com/dotnet/core/sdk:2.2 AS builder
 
-RUN echo "bump"
 RUN cd /tmp && \
     git clone https://github.com/patros/DevSkim.git && \
     cd DevSkim && \
