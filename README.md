@@ -21,6 +21,11 @@ Running (assuming source code is in the current working directory)...
 
 If no issues are found the exit code will be 0.
 
+More Documentation
+------------------
+
+Please refer to the [official repository](https://github.com/microsoft/devskim) for more documentation.
+
 Docker Tags
 -----------
 
