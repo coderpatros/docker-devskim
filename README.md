@@ -1,5 +1,7 @@
-[![Build status](https://dev.azure.com/patros/OpenSource/_apis/build/status/docker-devskim)](https://dev.azure.com/patros/OpenSource/_build/latest?definitionId=23)
+![Docker Cloud Build Status](https://img.shields.io/docker/cloud/build/coderpatros/devskim)
 ![Docker Pulls](https://img.shields.io/docker/pulls/coderpatros/devskim.svg)
+![GitHub](https://img.shields.io/github/license/patros/docker-devskim)
+
 
 DevSkim Docker Container
 ========================
