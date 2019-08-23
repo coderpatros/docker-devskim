@@ -1,5 +1,6 @@
 ![Docker Cloud Build Status](https://img.shields.io/docker/cloud/build/coderpatros/devskim)
 ![Docker Pulls](https://img.shields.io/docker/pulls/coderpatros/devskim.svg)
+[![](https://images.microbadger.com/badges/image/coderpatros/devskim.svg)](https://microbadger.com/images/coderpatros/devskim "Get your own image badge on microbadger.com")
 ![GitHub](https://img.shields.io/github/license/patros/docker-devskim)
 
 
