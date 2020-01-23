@@ -1,0 +1,8 @@
+#!/bin/bash
+cd tests
+if ./tests.sh $IMAGE_NAME ; then
+    echo All tests passed
+else
+    echo There were failed tests
+    exit 1
+fi
