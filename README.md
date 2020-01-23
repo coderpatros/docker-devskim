@@ -1,19 +1,20 @@
 ![Docker Cloud Build Status](https://img.shields.io/docker/cloud/build/coderpatros/devskim)
 ![Docker Pulls](https://img.shields.io/docker/pulls/coderpatros/devskim.svg)
-![GitHub](https://img.shields.io/github/license/patros/docker-devskim)
+![GitHub](https://img.shields.io/github/license/coderpatros/docker-devskim)
 
 
 # DevSkim Docker Container
 
 _PLEASE NOTE: I am currently using a custom build of DevSkim CLI._
 
-The official build does not currently support suppression comments or non-zero
-exit codes when issues are found.
+I _had_ been using a custom fork that included support for suppression comments
+and non-zero exit codes when issues are found.
 
-To review the changes I've made please view the commit history in my
-[custom branch](https://github.com/patros/DevSkim/commits/custom).
+These changes have now been merged upstream. However the latest official
+release still doesn't include these changes.
 
-Once upstream changes have been accepted I'll revert to using it.
+So this docker image includes a custom build based on the current `master`
+branch.
 
 ## Basic Usage
 
