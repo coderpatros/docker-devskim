@@ -1,0 +1,8 @@
+#!/bin/bash
+cd tests
+if ./run_tests.sh ; then
+    echo All tests passed
+else
+    echo There were failed tests
+    exit 1
+fi
