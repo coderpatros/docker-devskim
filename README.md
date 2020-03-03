@@ -5,16 +5,9 @@
 
 # DevSkim Docker Container
 
-_PLEASE NOTE: I am currently using a custom build of DevSkim CLI._
+_PLEASE NOTE: The DevSkim team are planning to release an official Docker image [issue #64](https://github.com/microsoft/DevSkim/issues/64)._
 
-I _had_ been using a custom fork that included support for suppression comments
-and non-zero exit codes when issues are found.
-
-These changes have now been merged upstream. However the latest official
-release still doesn't include these changes.
-
-So this docker image includes a custom build based on the current `master`
-branch.
+When that happens I will being deprecating this image in favour of theirs.
 
 ## Basic Usage
 
@@ -44,15 +37,3 @@ configuration.
 
 Please refer to the [official repository](https://github.com/microsoft/devskim)
 for more documentation.
-
-## Docker Tags
-
-Current tag to track is `latest`.
-
-I regularly rebuild the image to ensure it picks up any updates to the base
-`ubuntu:18.04` image
-
-I'm keeping an eye on DevSkim releases and will update as soon as I can.
-
-Although there hasn't been much activity in the DevSkim repo recently I've
-been assured that it is still actively maintained ([refer issue #69](https://github.com/microsoft/DevSkim/issues/69)).
